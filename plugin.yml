@@ -1,0 +1,6 @@
+name: LoginLimiter
+main: cluster.login.LoginLimiter
+version: 1.0
+commands:
+  loginlimiter:
+    aliases: [ll]

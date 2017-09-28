@@ -1,0 +1,21 @@
+# How many logins are allowed in a specified amount of time, -1 to disable
+threshold: 7
+# What time interval is used to analyze the players login
+timeout: 1000
+
+# Whether to store nicknames of players which joined the server. It allows them to bypass the login limit.
+userCache:
+  check: true
+  # When player nickname will be saved?
+  #   "join" - when player joins the server
+  #   "authme" - hook the AuthMe LoginEvent when player logging in
+  #   "disabled" - disable caching
+  # Anyway player nickname can be saved by using command '/loginlimiter store <player>'
+  storeType: join
+  # Prevent player join the server if his nickname is stored with different case.
+  safeCase: true
+
+messages:
+  kickLimit: '&cToo many players logging in. Try again later.'
+  kickCase: '&7You must be logged as &a{realname}&7 but not &c{name}'
+  noPermission: '&cInsufficient permissions!'
